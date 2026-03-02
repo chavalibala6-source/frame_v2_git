@@ -9,9 +9,9 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app.py ./frame_v2
-COPY templates/ ./frame_v2/templates/
-COPY static/ ./frame_v2/static/
+COPY frame_v2/app.py ./frame_v2/
+COPY frame_v2/templates/ ./frame_v2/templates/
+COPY frame_v2/static/ ./frame_v2/static/
 
 EXPOSE 5000
 CMD ["python", "app.py"]
